@@ -6,13 +6,17 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
+    "@mdi/font": "5.9.55",
     "core-js": "^3.8.3",
+    "roboto-fontface": "*",
     "vue": "^3.2.13",
-    "vue-class-component": "^8.0.0-0"
+    "vue-class-component": "^8.0.0-0",
+    "vuetify": "npm:@vuetify/nightly@next",
+    "webfontloader": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -21,6 +25,7 @@
     "@storybook/addon-essentials": "^6.4.20",
     "@storybook/addon-links": "^6.4.20",
     "@storybook/vue3": "^6.4.20",
+    "@types/webfontloader": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vue/cli-plugin-babel": "~5.0.0",
@@ -31,8 +36,12 @@
     "babel-loader": "^8.2.4",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "sass": "^1.38.0",
+    "sass-loader": "^10.0.0",
     "typescript": "~4.5.5",
-    "vue-loader": "^14.2.2"
+    "vue-cli-plugin-vuetify": "~2.4.8",
+    "vue-loader": "^14.2.2",
+    "vuetify-loader": "^2.0.0-alpha.0"
   },
   "eslintConfig": {
     "root": true,
