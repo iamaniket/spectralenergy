@@ -24,40 +24,64 @@ ChartJS.register(
 );
 
 export const LinerChartProps = {
+  /*
+    Text ID for chart
+  */
   chartId: {
     type: String,
     default: "line-chart",
   },
   /**
-   * backgroundColor of the button.
+   * background color for chart lines.
    */
   backgroundColor: {
     type: String,
     default: "#f87979",
     control: "color",
   },
+  /**
+   * Labels array
+   */
   labels: {
     type: Array,
   },
+  /**
+   * Data array
+   */
   data: {
     type: Array,
   },
+  /**
+   * Width of chart
+   */
   width: {
     type: Number,
     default: 200,
   },
+  /**
+   * height of chart
+   */
   height: {
     type: Number,
     default: 200,
   },
+  /**
+   * CSS for cusomizable look
+   */
   cssClasses: {
     default: "",
     type: String,
   },
+  /**
+   * Styles for cusomizable look
+   */
   styles: {
     type: Object as PropType<Partial<CSSStyleDeclaration>>,
     default: () => {},
   },
+  /**
+   * Plugins for cusomizable look
+   */
   plugins: {
     type: Array as PropType<Plugin<"line">[]>,
     default: () => [],

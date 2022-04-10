@@ -7,7 +7,7 @@ import { defineComponent } from "vue";
 import LineChart from "../skeleton/LineChart";
 
 export default defineComponent({
-  name: "lineChart-container",
+  name: "line-chart-container",
 
   components: {
     LineChart,

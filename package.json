@@ -16,6 +16,7 @@
     "vue": "^3.2.13",
     "vue-chartjs": "^4.0.5",
     "vue-class-component": "^8.0.0-0",
+    "vuejs-tree": "^3.0.2",
     "vuetify": "npm:@vuetify/nightly@next",
     "webfontloader": "^1.0.0"
   },
