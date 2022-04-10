@@ -7,7 +7,7 @@
         :nodes="items"
         :custom-options="myCustomOptions"
         :custom-styles="myCustomStyles"
-        style="padding: 20px"
+        style="padding: 20px; height: 97vh"
       ></Tree>
     </v-card>
   </div>
@@ -91,6 +91,7 @@ export default defineComponent({
           width: "50px",
           height: "auto",
           maxHeight: "300px",
+          minHeight: "100%",
           overflowY: "auto",
           display: "inline-block",
         },

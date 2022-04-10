@@ -1,13 +1,14 @@
 <template>
   <AppSidebar
     :items="items"
-    color="blue"
     @onRowSelect="onRowSelect"
     @onRowExpand="onRowExpand"
   />
 </template>
 
 <script lang="ts">
+import { store } from "@/state/store";
+import { TreeNode } from "@/state/Types/TreeNode";
 import { defineComponent } from "vue";
 import AppSidebar from "../skeleton/AppSidebar.vue";
 
@@ -23,46 +24,15 @@ export default defineComponent({
   },
   computed: {
     items() {
-      return [
-        {
-          text: "Root 1",
-          state: { selected: false, expanded: false },
-          nodes: [
-            {
-              text: "Child 1",
-              state: { selected: false, expanded: false },
-              nodes: [
-                {
-                  text: "Grandchild 1",
-                  state: { selected: false, expanded: false },
-                },
-                {
-                  text: "Grandchild 2",
-                  state: { selected: false, expanded: false },
-                },
-              ],
-            },
-            {
-              text: "Child 2",
-              state: { selected: false, expanded: false },
-            },
-          ],
-        },
-        {
-          text: "Root 2",
-          state: { selected: false, expanded: false },
-        },
-      ];
+      return store.getters["assetNodes"];
     },
   },
   data: () => ({
-    onRowSelect: (row: any) => {
-      console.log("onRowSelect");
-      console.log(row);
+    onRowSelect: (row: TreeNode) => {
+      store.commit("selectAsset", row.id);
     },
-    onRowExpand: (row: any) => {
-      console.log("onRowSelect");
-      console.log(row);
+    onRowExpand: (row: TreeNode) => {
+      store.commit("expandAsset", row.id);
     },
   }),
 });
