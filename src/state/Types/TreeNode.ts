@@ -1,3 +1,6 @@
+/*
+ Tree node structure
+*/
 export interface TreeNode {
   id: number;
   text: string;

@@ -1,4 +1,4 @@
 export interface Measurement {
   assetId: number;
-  measurement: Object;
+  measurements: Object;
 }

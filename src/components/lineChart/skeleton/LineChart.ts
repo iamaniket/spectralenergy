@@ -1,4 +1,4 @@
-import { defineComponent, h, PropType } from "vue";
+import { defineComponent, h, PropType, watch } from "vue";
 
 import { Line } from "vue-chartjs";
 import {
@@ -95,7 +95,7 @@ export default defineComponent({
   },
   props: LinerChartProps,
   setup(props) {
-    const chartData = {
+    let chartData = {
       labels: props.labels,
       datasets: [
         {
@@ -106,6 +106,23 @@ export default defineComponent({
       ],
     };
 
+    // Watch prop value change and assign to value 'chartData' for rerender
+    watch(
+      () => props.data,
+      (newValue: any) => {
+        chartData = {
+          labels: props.labels,
+          datasets: [
+            {
+              label: props.chartId,
+              backgroundColor: props.backgroundColor,
+              data: props.data,
+            },
+          ],
+        };
+      }
+    );
+
     const chartOptions = {
       responsive: true,
       maintainAspectRatio: false,
@@ -114,7 +131,7 @@ export default defineComponent({
     return () =>
       // @ts-ignore Line false alarm for typings
       h(Line, {
-        chartData,
+        chartData: chartData,
         chartOptions,
         chartId: props.chartId,
         width: props.width,

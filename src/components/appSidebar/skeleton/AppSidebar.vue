@@ -1,16 +1,18 @@
 <template>
-  <div>
-    <v-card width="400" elevation="4" style="height: 100vh; overflow: hidden">
-      <Tree
-        id="my-tree-id"
-        ref="my-tree-ref"
-        :nodes="items"
-        :custom-options="myCustomOptions"
-        :custom-styles="myCustomStyles"
-        style="padding: 20px; height: 97vh"
-      ></Tree>
-    </v-card>
-  </div>
+  <v-card
+    width="400"
+    elevation="4"
+    style="height: calc(100vh - 70px); overflow: hidden"
+  >
+    <Tree
+      id="my-tree-id"
+      ref="my-tree-ref"
+      :nodes="items"
+      :custom-options="myCustomOptions"
+      :custom-styles="myCustomStyles"
+      style="padding: 20px"
+    ></Tree>
+  </v-card>
 </template>
 
 <script lang='ts'>
@@ -27,7 +29,7 @@ export const AppSidebarProps = {
     required: true,
   },
 };
-
+// HACK we are not using drawer here because it is having issues with alignment. May be because UI lis is in BETA
 export default defineComponent({
   name: "app-sidebar",
   components: {
