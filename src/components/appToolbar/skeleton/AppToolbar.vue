@@ -34,7 +34,6 @@ export const AppToolbarProps = {
 */
 export default defineComponent({
   name: "app-toolbar",
-  props: AppToolbarProps,
-  data() {},
+  props: AppToolbarProps
 });
 </script>

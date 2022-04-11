@@ -1,6 +1,5 @@
 <template>
   <LineChart
-    :ref="width"
     :height="height"
     :chartId="chartId"
     :labels="labels"

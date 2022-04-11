@@ -77,7 +77,7 @@ export const LinerChartProps = {
    */
   styles: {
     type: Object as PropType<Partial<CSSStyleDeclaration>>,
-    default: () => {},
+    default: () => { },
   },
   /**
    * Plugins for cusomizable look
@@ -109,8 +109,7 @@ export default defineComponent({
     // Watch prop value change and assign to value 'chartData' for rerender
     watch(
       () => props.data,
-      // eslint-disable-next-line no-unused-vars
-      (newValue: any) => {
+      () => {
         chartData = {
           labels: props.labels,
           datasets: [

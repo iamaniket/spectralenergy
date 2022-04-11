@@ -1,6 +1,5 @@
 <template>
   <v-card
-    width="400"
     elevation="4"
     style="height: calc(100vh - 70px); overflow: hidden"
   >
