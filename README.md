@@ -53,4 +53,5 @@ Created Vue3(typescript) based Web application with vuetify UI, storybook UI doc
 -> In our case we are just grabbing it from JSOn file.
 "state" folder has state management related classes
 -> state getters are responsible for providing data that can be consumed by components.
-->
+
+In our case "App.vue" will decide to call Services to grab the data and have other components to perform their operations.
