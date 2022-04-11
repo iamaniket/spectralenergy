@@ -1,4 +1,3 @@
-import { createApp } from "vue";
 import { createStore } from "vuex";
 import { Asset } from "./Types/Asset";
 import { Measurement } from "./Types/Measurement";

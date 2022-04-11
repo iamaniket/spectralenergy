@@ -23,7 +23,7 @@ export const getMeasurementData = async function () {
 
 const fetchData = (APIEndPoint: string): Promise<Array<any> | undefined> => {
   try {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       fetch("data/" + APIEndPoint, {
         headers: {
           "Content-Type": "application/json",
